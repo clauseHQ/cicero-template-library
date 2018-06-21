@@ -1,0 +1,285 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120382669-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-120382669-1');
+    </script>
+
+    <script>
+        // handle drop down menus
+        window.addEventListener('load', function () {
+            var dropdown = document.querySelector('.dropdown');
+            if(dropdown) {
+                dropdown.addEventListener('click', function(event) {
+                    event.stopPropagation();
+                    dropdown.classList.toggle('is-active');
+                });
+            }
+        }, false);
+    </script>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    
+    
+
+    <!-— generic unfurl tags -->
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:domain" content="templates.accordproject.org" />
+    <meta name="twitter:label1" content="Apache 2.0 Licensed" />
+    <meta name="twitter:data1" content="on GitHub.com" />
+    <meta name="twitter:label2" content="Contribute" />
+    <meta name="twitter:data2" content="at AccordProject.org" />
+
+    
+<!-— facebook open graph tags -->
+<meta property="og:url" content="installment-sale@0.2.0.html" />
+<meta property="og:title" content="installment-sale@0.2.0" />
+<meta property="og:description" content="This is a clause for a simple installment sale." />
+<meta property="og:image" content="http://www.plantuml.com/plantuml/png/jLRRRfj047ttL-nZgoPyGMG5nxX2ii42eYggAhHU9dYhPPVCBcbGst_lsXZ7k3WbLlraCzTppZ0ZRhMXQAf2Z9YWMXE5kKCPKvYLgBu3CmwNDaI80gJHL83ZlpwJcnlo8RcgGGZruoCPZydF4I7a4vcgQYM0q49Lqen-ZzvNzVhwrxW72ECCK3beI_82d0YUAj1cCEuxeJIN-PBM_ndwKU7Be9zGGIM3Vy5UDM4Tcr6sKbfIdWsYqtQwq1IKD4YPYGqrbTxIyQvoXFgGp1VAZLLqfd36KPifhSF705xCmYQlcv1P9Hwv4B3XDBJteWvNWkVKS2NRLh51sucKTWdgGV9qYkmrMjSbe4MJ0pfC5QNIze-kjO72yPvjxc2GKn3y6R07wfGQIApc15vAcmbP6zguGym0VTlmwpUIDHvgnwy7iUhfUcB-R-ancEIoGhQc6df8DkyisjUA8sHjOEFqfG6hCAc1OjVoLDa10WxYsjFyeboRkt2IwZikpT-bBWdyu2J7zdcpiStzSJSB2_9mOu_MMcz_-YvJYb1GBktETGSexNhR6xNbbnQlUtxU3Uk5_lP1Opi6Zhlr7XA2SoLhYvnIRNTy9lSFNjInnDvytffs2lY1d_ZkF9tUUqVsn8kyE4aZD-bwaZ1fujE9DmiZBxsRXx4VVEu4BVmWNReF2oz8ElPDcfliKyuGVK_-BDr7jo2ppMV97m00" />
+
+<!-— twitter card tags additive with the og: tags -->
+<meta name="twitter:title" content="installment-sale@0.2.0" />
+<meta name="twitter:description" content="This is a clause for a simple installment sale." />
+<meta name="twitter:image" content="http://www.plantuml.com/plantuml/png/jLRRRfj047ttL-nZgoPyGMG5nxX2ii42eYggAhHU9dYhPPVCBcbGst_lsXZ7k3WbLlraCzTppZ0ZRhMXQAf2Z9YWMXE5kKCPKvYLgBu3CmwNDaI80gJHL83ZlpwJcnlo8RcgGGZruoCPZydF4I7a4vcgQYM0q49Lqen-ZzvNzVhwrxW72ECCK3beI_82d0YUAj1cCEuxeJIN-PBM_ndwKU7Be9zGGIM3Vy5UDM4Tcr6sKbfIdWsYqtQwq1IKD4YPYGqrbTxIyQvoXFgGp1VAZLLqfd36KPifhSF705xCmYQlcv1P9Hwv4B3XDBJteWvNWkVKS2NRLh51sucKTWdgGV9qYkmrMjSbe4MJ0pfC5QNIze-kjO72yPvjxc2GKn3y6R07wfGQIApc15vAcmbP6zguGym0VTlmwpUIDHvgnwy7iUhfUcB-R-ancEIoGhQc6df8DkyisjUA8sHjOEFqfG6hCAc1OjVoLDa10WxYsjFyeboRkt2IwZikpT-bBWdyu2J7zdcpiStzSJSB2_9mOu_MMcz_-YvJYb1GBktETGSexNhR6xNbbnQlUtxU3Uk5_lP1Opi6Zhlr7XA2SoLhYvnIRNTy9lSFNjInnDvytffs2lY1d_ZkF9tUUqVsn8kyE4aZD-bwaZ1fujE9DmiZBxsRXx4VVEu4BVmWNReF2oz8ElPDcfliKyuGVK_-BDr7jo2ppMV97m00" />
+<meta name="twitter:image:alt" content="UML diagram of installment-sale@0.2.0 namespace." />
+<meta name="twitter:url" content="installment-sale@0.2.0.html" />
+
+
+    <title>Accord Project Template Library</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+
+<body>
+    <a href="https://github.com/accordproject/cicero-template-library">
+        <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"
+            alt="Fork me on GitHub">
+    </a>
+    <section class="section">
+        <div class="container">
+            <a href="/">
+                <img src="/accord_logo.png" />
+            </a>
+        </div>
+    </section>
+
+    
+    <section class="section">
+        <div class="container">
+            <h1 class="title">
+                Template installment-sale@0.2.0
+            </h1>
+            <p class="subtitle">
+                This is a clause for a simple installment sale.
+            </p>
+
+            <p>
+                <div class="dropdown">
+                    <div class="dropdown-trigger">
+                        <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                            <span>Versions</span>
+                            <span class="icon is-small">
+                                <i class="fas fa-angle-down" aria-hidden="true"></i>
+                            </span>
+                        </button>
+                    </div>
+                    <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                        <div class="dropdown-content">
+                        
+                            <a href="installment-sale@0.2.0.html" class="dropdown-item is-active">
+                                installment-sale@0.2.0
+                            </a>
+                        
+                            <a href="installment-sale@0.1.0.html" class="dropdown-item ">
+                                installment-sale@0.1.0
+                            </a>
+                        
+                            <a href="installment-sale@0.0.3.html" class="dropdown-item ">
+                                installment-sale@0.0.3
+                            </a>
+                        
+                        </div>
+                    </div>
+                </div>
+                <a href="./archives/installment-sale@0.2.0.cta" class="button is-rounded">Download Archive</a>
+            </p>
+
+            <img src="http://www.plantuml.com/plantuml/svg/jLRRRfj047ttL-nZgoPyGMG5nxX2ii42eYggAhHU9dYhPPVCBcbGst_lsXZ7k3WbLlraCzTppZ0ZRhMXQAf2Z9YWMXE5kKCPKvYLgBu3CmwNDaI80gJHL83ZlpwJcnlo8RcgGGZruoCPZydF4I7a4vcgQYM0q49Lqen-ZzvNzVhwrxW72ECCK3beI_82d0YUAj1cCEuxeJIN-PBM_ndwKU7Be9zGGIM3Vy5UDM4Tcr6sKbfIdWsYqtQwq1IKD4YPYGqrbTxIyQvoXFgGp1VAZLLqfd36KPifhSF705xCmYQlcv1P9Hwv4B3XDBJteWvNWkVKS2NRLh51sucKTWdgGV9qYkmrMjSbe4MJ0pfC5QNIze-kjO72yPvjxc2GKn3y6R07wfGQIApc15vAcmbP6zguGym0VTlmwpUIDHvgnwy7iUhfUcB-R-ancEIoGhQc6df8DkyisjUA8sHjOEFqfG6hCAc1OjVoLDa10WxYsjFyeboRkt2IwZikpT-bBWdyu2J7zdcpiStzSJSB2_9mOu_MMcz_-YvJYb1GBktETGSexNhR6xNbbnQlUtxU3Uk5_lP1Opi6Zhlr7XA2SoLhYvnIRNTy9lSFNjInnDvytffs2lY1d_ZkF9tUUqVsn8kyE4aZD-bwaZ1fujE9DmiZBxsRXx4VVEu4BVmWNReF2oz8ElPDcfliKyuGVK_-BDr7jo2ppMV97m00" />
+
+            <div class="content">
+                <p>
+                <h1 id="installmentsale">Installment Sale</h1>
+<p>A simple clause for a sale paid in installments.</p>
+                </p>
+            </div>
+
+            <h4 class="title is-4">Sample</h4>
+            <div class="content">
+                <pre style="white-space: pre-wrap; border: 0; background-color: transparent;">
+"Dan" agrees to pay to "Ned" the total sum e10000, in the manner following:
+
+E500 is to be paid at closing, and the remaining balance of E9500 shall be paid as follows:
+
+E500 or more per month on the first day of each and every month, and continuing until the entire balance, including both principal and interest, shall be paid in full -- provided, however, that the entire balance due plus accrued interest and any other amounts due here-under shall be paid in full on or before 24 months.
+
+Monthly payments shall include both principal and interest with interest at the rate of 1.5%, computed monthly on the remaining balance from time to time unpaid.
+
+                </pre>
+            </div>
+
+            <h4 class="title is-4">Model Dependencies</h4>
+            <div class="content">
+                <ul>
+                
+                <li><a href="https://models.accordproject.org/cicero/contract.html">org.accordproject.cicero.contract.*</a></li>
+                
+                <li><a href="https://models.accordproject.org/cicero/runtime.html">org.accordproject.cicero.runtime.*</a></li>
+                
+                <li><a href="https://models.accordproject.org/money.html">org.accordproject.money.MonetaryAmount</a></li>
+                
+                </ul>
+            </div>
+
+            <div class="container">
+    <h2 class="title is-2">Technical Integration</h2>
+
+    <div class="content">
+    <p>
+    Please refer to the <a href="https://docs.accordproject.org/docs/cicero.html">Cicero documentation</a> 
+    for details and examples of how to integrate a call to a Cicero template into your application.
+    <p>
+    View the Latest code for this template on <a href="https://github.com/accordproject/cicero-template-library/tree/master/src/installment-sale">on GitHub.</a>
+    </div>
+
+    <h4 class="title is-4">Sample Instance</h4>
+    <pre style="white-space: pre-wrap; border: 0; background-color: transparent;"><code style="white-space: pre-wrap;">{
+    "$class": "org.accordproject.installmentsale.InstallmentSaleContract",
+    "contractId": "24173c00-721a-45b8-8fea-44201b48eff5",
+    "BUYER": "Dan",
+    "SELLER": "Ned",
+    "INITIAL_DUE": 10000,
+    "INTEREST_RATE": 1.5,
+    "TOTAL_DUE_BEFORE_CLOSING": 9500,
+    "MIN_PAYMENT": 500,
+    "DUE_AT_CLOSING": 500
+}</pre></code>
+
+    <h4 class="title is-4">State</h4>
+    <pre style="white-space: pre-wrap; border: 0; background-color: transparent;"><code style="white-space: pre-wrap;">{
+    "state": "tbd"
+}</pre></code>
+
+    <h4 class="title is-4">Request Types</h4>
+    <table class="table">
+    <thead>
+        <tr>
+        <th>Type</th>
+        <th>Sample JSON</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        <tr>
+        <th>org.accordproject.installmentsale.ClosingPayment</th>
+        <td><pre style="white-space: pre-wrap; border: 0; background-color: transparent;"><code style="white-space: pre-wrap;">{
+    "$class": "org.accordproject.installmentsale.ClosingPayment",
+    "amount": 89.894,
+    "transactionId": "9a43a570-748f-11e8-bd9a-f3ef533384e7",
+    "timestamp": "2018-06-20T13:41:15.207Z"
+}</pre></code></td>
+        </tr>
+        
+        <tr>
+        <th>org.accordproject.installmentsale.Installment</th>
+        <td><pre style="white-space: pre-wrap; border: 0; background-color: transparent;"><code style="white-space: pre-wrap;">{
+    "$class": "org.accordproject.installmentsale.Installment",
+    "amount": 201.842,
+    "transactionId": "9a437e60-748f-11e8-bd9a-f3ef533384e7",
+    "timestamp": "2018-06-20T13:41:15.207Z"
+}</pre></code></td>
+        </tr>
+        
+    </tbody>
+    </table>
+
+    <h4 class="title is-4">Response Types</h4>
+    <table class="table">
+    <thead>
+        <tr>
+        <th>Type</th>
+        <th>Sample JSON</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        <tr>
+        <th>org.accordproject.installmentsale.Balance</th>
+        <td><pre style="white-space: pre-wrap; border: 0; background-color: transparent;"><code style="white-space: pre-wrap;">{
+    "$class": "org.accordproject.installmentsale.Balance",
+    "balance": 159.405,
+    "total_paid": 24.243,
+    "transactionId": "9a43cc80-748f-11e8-bd9a-f3ef533384e7",
+    "timestamp": "2018-06-20T13:41:15.208Z"
+}</pre></code></td>
+        </tr>
+        
+    </tbody>
+    </table>
+
+    <h4 class="title is-4">Events Types</h4>
+    <table class="table">
+    <thead>
+        <tr>
+        <th>Type</th>
+        <th>Sample JSON</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        <tr>
+        <th>org.accordproject.installmentsale.PaymentObligation</th>
+        <td><pre style="white-space: pre-wrap; border: 0; background-color: transparent;"><code style="white-space: pre-wrap;">{
+    "$class": "org.accordproject.installmentsale.PaymentObligation",
+    "amount": 8.025,
+    "party": "Quis nostrud sint.",
+    "eventId": "9a43f390-748f-11e8-bd9a-f3ef533384e7",
+    "timestamp": "2018-06-20T13:41:15.209Z"
+}</pre></code></td>
+        </tr>
+        
+    </tbody>
+    </table>
+</div>
+
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="content has-text-centered">
+                <p>
+                    Copyright 2018 <a href="https://accordproject.org">Accord Project</a>. Licensed under the
+                    <a href="https://www.apache.org/licenses/LICENSE-2.0.html">Apache-2.0</a> Open Source software license.
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

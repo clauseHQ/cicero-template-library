@@ -5,13 +5,14 @@
 <meta property="og:url" content="{{serverRoot}}{{filePath}}" />
 <meta property="og:title" content="{{template.getIdentifier()}}" />
 <meta property="og:description" content="{{template.getMetadata().getDescription()}}" />
-<meta property="og:image" content="{{umlURL}}" />
+<meta property="og:image" content="{{umlCardURL}}" />
 
 <!-— twitter card tags additive with the og: tags -->
-<meta name="twitter:title" value="{{template.getIdentifier()}}" />
-<meta name="twitter:description" value="{{template.getMetadata().getDescription()}}" />
-<meta name="twitter:image" content="{{umlURL}}" />
-<meta name="twitter:url" value="{{serverRoot}}{{filePath}}" />
+<meta name="twitter:title" content="{{template.getIdentifier()}}" />
+<meta name="twitter:description" content="{{template.getMetadata().getDescription()}}" />
+<meta name="twitter:image" content="{{umlCardURL}}" />
+<meta name="twitter:image:alt" content="UML diagram of {{template.getIdentifier()}} namespace." />
+<meta name="twitter:url" content="{{serverRoot}}{{filePath}}" />
 {% endblock %}
 
 {% block body %}
@@ -25,12 +26,44 @@
             </p>
 
             <p>
+                <div class="dropdown">
+                    <div class="dropdown-trigger">
+                        <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                            <span>Versions</span>
+                            <span class="icon is-small">
+                                <i class="fas fa-angle-down" aria-hidden="true"></i>
+                            </span>
+                        </button>
+                    </div>
+                    <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                        <div class="dropdown-content">
+                        {% for name in templateVersions |sort(true)%}
+                            <a href="{{name}}.html" class="dropdown-item {{"is-active" if name === template.getIdentifier()}}">
+                                {{name}}
+                            </a>
+                        {% endfor %}
+                        </div>
+                    </div>
+                </div>
                 <a href="./archives/{{template.getIdentifier()}}.cta" class="button is-rounded">Download Archive</a>
             </p>
 
             <img src="{{umlURL}}" />
 
-            <h2 class="title is-2">Model Dependencies</h2>
+            <div class="content">
+                <p>
+                {{readmeHtml}}
+                </p>
+            </div>
+
+            <h4 class="title is-4">Sample</h4>
+            <div class="content">
+                <pre style="{{pre_style}}">
+{{template.getMetadata().getSample()}}
+                </pre>
+            </div>
+
+            <h4 class="title is-4">Model Dependencies</h4>
             <div class="content">
                 <ul>
                 {% for ns, uri in template.getTemplateModel().getModelFile().getExternalImports() %}
@@ -41,19 +74,7 @@
                 </ul>
             </div>
 
-            <h2 class="title is-2">Sample</h2>
-            <div class="content">
-                <pre>
-{{template.getMetadata().getSample()}}
-                </pre>
-            </div>
-
-            <h2 class="title is-2">README</h2>
-            <div class="content">
-                <p>
-                {{readmeHtml}}
-                </p>
-            </div>
+            {% include "developers.njk" %}
         </div>
     </section>
 {% endblock %}
